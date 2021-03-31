@@ -60,7 +60,7 @@ public class SeasonsFragment extends Fragment {
         if (page == 0) {
             layoutId = R.layout.menu_main;
             view = inflater.inflate(R.layout.menu_main, container, false);
-            int[] imagesID = new int[]{R.id.hiver, R.id.printemps, R.id.ete, R.id.automne};
+            int[] imagesID = new int[]{R.id.spring, R.id.summer, R.id.autumn, R.id.winter};
             for (int i = 0; i < imagesID.length; i++) {
                 ImageView img = (ImageView) view.findViewById(imagesID[i]);
                 img.setClickable(true);
@@ -73,24 +73,26 @@ public class SeasonsFragment extends Fragment {
                 });
             }
         } else {
-        layoutId = R.layout.fragment_main;
-        view = inflater.inflate(R.layout.fragment_main, container, false);
-        ImageView image = (ImageView) view.findViewById(R.id.imageView);
-        switch (page) {
-            case 0:
-                image.setImageResource(R.drawable.spring);
-                break;
-            case 1:
-                image.setImageResource(R.drawable.summer);
-                break;
-            case 2:
-                image.setImageResource(R.drawable.autumn);
-                break;
-            case 3:
-                image.setImageResource(R.drawable.hiver);
-                break;
-        }
+            layoutId = R.layout.fragment_main;
+            view = inflater.inflate(R.layout.fragment_main, container, false);
+            ImageView image = (ImageView) view.findViewById(R.id.imageView);
+            switch (page) {
+                case 0:
+                    image.setImageResource(R.drawable.spring);
+                    break;
+                case 1:
+                    image.setImageResource(R.drawable.summer);
+                    break;
+                case 2:
+                    image.setImageResource(R.drawable.autumn);
+                    break;
+                case 3:
+                    image.setImageResource(R.drawable.hiver);
+                    break;
+            }
 
-        return view;
+        }
+        
+            return view;
     }
 }
