@@ -77,22 +77,22 @@ public class SeasonsFragment extends Fragment {
             view = inflater.inflate(R.layout.fragment_main, container, false);
             ImageView image = (ImageView) view.findViewById(R.id.imageView);
             switch (page) {
-                case 0:
+                case 1:
                     image.setImageResource(R.drawable.spring);
                     break;
-                case 1:
+                case 2:
                     image.setImageResource(R.drawable.summer);
                     break;
-                case 2:
+                case 3:
                     image.setImageResource(R.drawable.autumn);
                     break;
-                case 3:
+                case 4:
                     image.setImageResource(R.drawable.hiver);
                     break;
             }
 
         }
-        
+
             return view;
     }
 }
