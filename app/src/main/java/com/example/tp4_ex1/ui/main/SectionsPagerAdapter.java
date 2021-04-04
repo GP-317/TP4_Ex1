@@ -77,19 +77,19 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
                 break;
         }
 
-        SpannableString sb = new SpannableString(" " + titre);
+        SpannableString sb = new SpannableString(" " + titre + " ");
         // un espace est ajouté pour séparer le texte de l'image
 
         icone.setBounds(0, 0, icone.getIntrinsicWidth(), icone.getIntrinsicHeight());
         ImageSpan span = new ImageSpan(icone, ImageSpan.ALIGN_BASELINE);
-        sb.setSpan(span, 0, 1, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        sb.setSpan(span, sb.length()-1, sb.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
 
         return sb;
     }
 
         @Override
     public int getCount() {
-        // Show 4 total pages.
+        // Show 4 total pages + 1 menu.
         return 5;
     }
 }
